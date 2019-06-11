@@ -17,3 +17,16 @@ run:
 
 	@echo '--> Running python script that generates target folder'
 	@. run-python.sh poc-write.py
+
+run-using-docker-compose:
+	@echo '--> Running simple python script'
+	@docker-compose run python poc.py
+
+	@echo '--> Running python script that reads environment variables'
+	@docker-compose run python poc-env.py
+
+	@echo '--> Running python script with requirements'
+	@docker-compose run python poc-requirement.py
+
+	@echo '--> Running python script that generates target folder'
+	@docker-compose run python poc-write.py

@@ -16,3 +16,8 @@ Run the python scripts
 make run
 ```
 This run task uses the run-python.sh file to execute python from the docker container, this file can be used to execute another python scripts.
+
+Run the python scripts using docker-compose
+```
+make run-using-docker-compose
+```

@@ -1,0 +1,12 @@
+version: '3'
+services:
+  python:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ".:/project"
+      - "./target:/target"
+      - "./json:/json"
+    environment:
+      ENV_VAR: ${ENV_VAR}
